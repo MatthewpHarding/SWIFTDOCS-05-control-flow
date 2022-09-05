@@ -155,7 +155,7 @@ print("Game over!")
 //:
 //: Here’s the Snakes and Ladders example again, written as a repeat-while loop rather than a while loop. The values of finalSquare, board, square, and diceRoll are initialized in exactly the same way as with a while loop.
 let finalSquare2 = 25
-var board = [Int](repeating: 0, count: finalSquare2 + 1)
+board = [Int](repeating: 0, count: finalSquare2 + 1)
 board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
 board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
 square = 0
@@ -269,18 +269,18 @@ default:
 //:
 //: The body of each case must contain at least one executable statement. It isn’t valid to write the following code, because the first case is empty:
 let anotherCharacter: Character = "a"
-switch anotherCharacter {
-case "a": // Invalid, the case has an empty body
-case "A":
-    print("The letter A")
-default:
-    print("Not the letter A")
-}
+// ⛔️ Compilation error: uncomment to view
+//switch anotherCharacter {
+//case "a": // Invalid, the case has an empty body
+//case "A":
+//    print("The letter A")
+//default:
+//    print("Not the letter A")
+//}
 // This will report a compile-time error.
 //: Unlike a switch statement in C, this switch statement doesn’t match both "a" and "A". Rather, it reports a compile-time error that case "a": doesn’t contain any executable statements. This approach avoids accidental fallthrough from one case to another and makes for safer code that’s clearer in its intent.
 //:
 //: To make a switch with a single case that matches both "a" and "A", combine the two values into a compound case, separating the values with commas.
-let anotherCharacter: Character = "a"
 switch anotherCharacter {
 case "a", "A":
     print("The letter A")
@@ -391,7 +391,6 @@ case let (x, y):
 //: ### Compound Cases
 //:
 //: Multiple switch cases that share the same body can be combined by writing several patterns after case, with a comma between each of the patterns. If any of the patterns match, then the case is considered to match. The patterns can be written over multiple lines if the list is long. For example:
-let someCharacter: Character = "e"
 switch someCharacter {
 case "a", "e", "i", "o", "u":
     print("\(someCharacter) is a vowel")
