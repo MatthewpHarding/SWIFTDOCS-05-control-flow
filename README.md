@@ -139,7 +139,7 @@ while condition {
 ```
 This example plays a simple game of Snakes and Ladders (also known as Chutes and Ladders):
 
-![Diagram](snakesAndLadders_2x.png)
+![Diagram](readme-images/snakesAndLadders_2x.png)
 The rules of the game are as follows:
 
 * The board has 25 squares, and the aim is to land on or beyond square 25.
@@ -425,7 +425,7 @@ default:
 }
 // Prints "(1, 1) is inside the box"
 ```
-![Diagram](coordinateGraphSimple_2x.png)
+![Diagram](readme-images/coordinateGraphSimple_2x.png)
 The `switch` statement determines whether the point is at the origin (0, 0), on the red x-axis, on the green y-axis, inside the blue 4-by-4 box centered on the origin, or outside of the box.
 
 Unlike C, Swift allows multiple `switch` cases to consider the same value or values. In fact, the point (0, 0) could match all four of the cases in this example. However, if multiple matches are possible, the first matching case is always used. The point (0, 0) would match case (0, 0) first, and so all other matching cases would be ignored.
@@ -448,7 +448,7 @@ case let (x, y):
 }
 // Prints "on the x-axis with an x value of 2"
 ```
-![Diagram](coordinateGraphMedium_2x.png)
+![Diagram](readme-images/coordinateGraphMedium_2x.png)
 The `switch` statement determines whether the point is on the red x-axis, on the green y-axis, or elsewhere (on neither axis).
 
 The three `switch` cases declare placeholder constants `x` and `y`, which temporarily take on one or both tuple values from `anotherPoint`. The first case, `case (let x, 0)`, matches any point with a `y` value of `0` and assigns the point’s `x` value to the temporary constant `x`. Similarly, the second case, `case (0, let y)`, matches any point with an `x` value of `0` and assigns the point’s `y` value to the temporary constant `y`.
@@ -475,7 +475,7 @@ case let (x, y):
 }
 // Prints "(1, -1) is on the line x == -y"
 ```
-![Diagram](coordinateGraphComplex_2x.png)
+![Diagram](readme-images/coordinateGraphComplex_2x.png)
 The `switch` statement determines whether the point is on the green diagonal line where `x == y`, on the purple diagonal line where `x == -y`, or neither.
 
 The three `switch` cases declare placeholder constants `x` and `y`, which temporarily take on the two tuple values from `yetAnotherPoint`. These constants are used as part of a `where` clause, to create a dynamic filter. The `switch` case matches the current value of `point` only if the `where` clause’s condition evaluates to `true` for that value.
@@ -649,7 +649,7 @@ If a particular dice roll would take you beyond square 25, you must roll again u
 
 The game board is the same as before.
 
-![Diagram](snakesAndLadders_2x.png)
+![Diagram](readme-images/snakesAndLadders_2x.png)
 The values of `finalSquare`, `board`, `square`, and `diceRoll` are initialized in the same way as before:
 
 ```Swift
