@@ -186,7 +186,7 @@ print("Game over!")
 //: Swift provides two ways to add conditional branches to your code: the `if` statement and the `switch` statement. Typically, you use the `if` statement to evaluate simple conditions with only a few possible outcomes. The `switch` statement is better suited to more complex conditions with multiple possible permutations and is useful in situations where pattern matching can help select an appropriate code branch to execute.
 //:
 //: ### If
-//: 
+//:
 //: In its simplest form, the `if` statement has a single `if` condition. It executes a set of statements only if that condition is `true`.
 var temperatureInFahrenheit = 30
 if temperatureInFahrenheit <= 32 {
@@ -658,3 +658,4 @@ if #unavailable(iOS 10) {
     // Fallback code
 }
 //: Using the `#unavailable` form helps make your code more readable when the check contains only fallback code.
+
